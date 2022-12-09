@@ -3,6 +3,8 @@ import Layout from'./pages/Layout';
 import './App.css';
 import Inicio from './pages/Inicio';
 import Nosotros from './pages/Nosotros';
+import Home from './pages/Home';
+import Default from './pages/Default';
 
 function App() {
   return (
@@ -10,9 +12,12 @@ function App() {
       <div class="App">
         <h1>Rutas</h1>
         <Routes>
-          <Route path="/" element={<Layout/>}/>
-          <Route path="/inicio" element={<Inicio/>}/>
-          <Route path="/nosotros" element={<Nosotros/>}/>
+          <Route path="/" element={<Layout/>}>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/inicio" element={<Inicio/>}/>
+            <Route path="/nosotros" element={<Nosotros/>}/>
+            <Route path="*" element={<Default/>}/>
+          </Route>
         </Routes>
       </div>
    
