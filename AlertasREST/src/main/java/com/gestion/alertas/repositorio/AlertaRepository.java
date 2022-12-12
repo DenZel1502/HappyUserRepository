@@ -1,12 +1,20 @@
 package com.gestion.alertas.repositorio;
 
-//import java.util.List;
+import java.io.Serializable;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.gestion.alertas.modelo.Alerta;
+import com.gestion.alertas.entity.Alerta;
 
-public interface AlertaRepository extends JpaRepository<Alerta,Integer>{
+@Repository("repositorio")
+public interface AlertaRepository extends JpaRepository<Alerta,Serializable>{
 
-//	public abstract List<Alerta> findByIdproducto(Integer id_producto);
+	
+	public abstract List<Alerta> findByIddispositivo(String iddispositivo); 
+	
+	
+	
+		
 }

@@ -1,9 +1,9 @@
 import {Routes,Route} from 'react-router-dom'
 import Layout from'./pages/Layout';
 import './App.css';
-import Inicio from './pages/Inicio';
-import Nosotros from './pages/Nosotros';
-import Home from './pages/Home';
+import Inicio from './pages/Inicio/Inicio';
+import Nosotros from './pages/Nosotros/Nosotros';
+import Home from './pages/Home/Home';
 import Default from './pages/Default';
 
 function App() {
